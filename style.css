@@ -1,0 +1,234 @@
+/* CSS Variables for Color Palette */
+:root {
+    --color-beige: #F5F5DC;
+    --color-khaki: #C3B091;
+    --color-chamoisee: #A0785A;
+    --color-coffee: #6F4E37;
+    --color-bistre: #3D2B1F;
+    
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-beige);
+    color: var(--color-bistre);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography Overrides */
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+.font-sans {
+    font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-beige);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-khaki);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-chamoisee);
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--color-chamoisee);
+    color: white;
+}
+
+/* Animation Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+/* Navigation Active State */
+.nav-link {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-chamoisee);
+    border-radius: 2px;
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+    width: 0;
+    transition: width 1.5s ease-out;
+}
+
+.skill-bar.animate {
+    width: var(--target-width);
+}
+
+/* Project Card Hover Effects */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(111, 78, 55, 0.15);
+}
+
+/* Form Input Focus States */
+input:focus,
+textarea:focus {
+    background-color: white;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Button Hover Effects */
+button, 
+a {
+    transition: all 0.3s ease;
+}
+
+/* Image Hover Zoom Effect */
+.group:hover img {
+    transform: scale(1.05);
+}
+
+/* Smooth Image Loading */
+img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+img[src=""] {
+    opacity: 0;
+}
+
+/* Responsive Typography Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav, 
+    footer, 
+    .project-card .absolute {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .fade-in-up {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Focus Visible for Keyboard Navigation */
+:focus-visible {
+    outline: 2px solid var(--color-chamoisee);
+    outline-offset: 2px;
+}
+
+/* Custom Cursor for Interactive Elements (Desktop Only) */
+@media (hover: hover) and (pointer: fine) {
+    a, 
+    button,
+    .project-card,
+    .skill-category {
+        cursor: pointer;
+    }
+}
+
+/* Loading State for Images */
+img[loading="lazy"] {
+    background: linear-gradient(90deg, var(--color-beige) 25%, var(--color-khaki) 50%, var(--color-beige) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+img[loading="lazy"].loaded {
+    background: none;
+    animation: none;
+}
