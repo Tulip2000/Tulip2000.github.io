@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan | Full Stack Developer & Designer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased bg-[#F5F5DC] text-[#3D2B1F]">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F5F5DC]/90 backdrop-blur-md border-b border-[#C3B091]/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-serif text-2xl font-bold text-[#6F4E37] tracking-tight hover:text-[#A0785A] transition-colors">
+                        Alex Morgan
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#projects" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#skills" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+                        Skills
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-[#6F4E37] hover:text-[#A0785A] focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-[#F5F5DC] border-t border-[#C3B091]/30 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">About</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Projects</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Skills</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / About Section -->
+    <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
+                <div class="order-2 md:order-1 fade-in-up">
+                    <p class="text-[#A0785A] font-medium tracking-wide uppercase text-sm mb-4">Welcome to my portfolio</p>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#3D2B1F] leading-tight mb-6">
+                        Crafting Digital <span class="text-[#A0785A] italic">Experiences</span>
+                    </h1>
+                    <p class="text-lg text-[#6F4E37] leading-relaxed mb-8 max-w-lg">
+                        I'm Alex Morgan, a Full Stack Developer and UI/UX Designer passionate about creating elegant, performant, and user-centered digital solutions. I blend technical expertise with creative design to bring ideas to life.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#projects" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-[#A0785A] hover:bg-[#6F4E37] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            View My Work
+                            <i data-lucide="arrow-down" class="ml-2 w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-[#A0785A] text-base font-medium rounded-full text-[#A0785A] hover:bg-[#A0785A] hover:text-white transition-all duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="order-1 md:order-2 flex justify-center fade-in-up delay-200">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
+                        <div class="absolute inset-0 bg-[#C3B091] rounded-full opacity-20 blur-3xl transform translate-x-4 translate-y-4"></div>
+                        <img 
+                            src="http://static.photos/people/640x360/42" 
+                            alt="Alex Morgan" 
+                            class="relative w-full h-full object-cover rounded-full border-4 border-[#C3B091]/30 shadow-2xl"
+                        >
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-2xl shadow-lg border border-[#C3B091]/20 hidden md:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-[#A0785A]/10 rounded-full flex items-center justify-center">
+                                    <i data-lucide="code-2" class="w-6 h-6 text-[#A0785A]"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-[#6F4E37] font-medium">Experience</p>
+                                    <p class="text-[#3D2B1F] font-bold">5+ Years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">My Projects</h2>
+                <div class="w-24 h-1 bg-[#A0785A] mx-auto rounded-full"></div>
+                <p class="mt-4 text-[#6F4E37] max-w-2xl mx-auto">A selection of my recent work, showcasing web applications, design systems, and creative solutions.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <article class="project-card group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/technology/640x360/101" alt="E-Commerce Platform" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">E-Commerce Platform</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">React</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/workspace/640x360/55" alt="Task Management App" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Task Management App</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Collaborative project management tool with real-time updates, drag-and-drop interface, and team analytics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Vue.js</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Firebase</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Tailwind</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-200">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/abstract/640x360/88" alt="Design System" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Design System</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Comprehensive component library and design tokens for a fintech startup, ensuring brand consistency.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Figma</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Storybook</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/technology/640x360/202" alt="AI Dashboard" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">AI Analytics Dashboard</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Machine learning visualization platform with real-time data processing and predictive analytics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Python</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">D3.js</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">AWS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/nature/640x360/33" alt="Sustainable Marketplace" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Eco Marketplace</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Sustainable products marketplace connecting eco-friendly vendors with conscious consumers.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Next.js</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Stripe</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">PostgreSQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-200">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/minimal/640x360/77" alt="Portfolio Generator" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Portfolio Generator</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">AI-powered portfolio builder that creates stunning personal websites from LinkedIn profiles.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">TypeScript</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">OpenAI</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Vercel</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">My Skills</h2>
+                <div class="w-24 h-1 bg-[#A0785A] mx-auto rounded-full"></div>
+                <p class="mt-4 text-[#6F4E37] max-w-2xl mx-auto">Technologies and tools I use to bring ideas to life.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Frontend -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="layout" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Frontend</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">React / Next.js</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Vue.js</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">TypeScript</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Tailwind CSS</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up delay-100">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="server" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Backend</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Node.js</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Python</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">PostgreSQL</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">GraphQL</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up delay-200">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="palette" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Design</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Figma</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Adobe XD</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Photoshop</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Illustrator</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">UI/UX</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Prototyping</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up delay-300">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Git</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Docker</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">AWS</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Vercel</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Jest</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Info -->
+                <div class="fade-in-up">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-6">Let's Work Together</h2>
+                    <p class="text-[#6F4E37] text-lg mb-8 leading-relaxed">
+                        Have a project in mind or want to discuss opportunities? I'd love to hear from you. Fill out the form or reach out directly through any of the channels below.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-[#A0785A]/10 rounded-full flex items-center justify-center group-hover:bg-[#A0785A] transition-colors duration-300">
+                                <i data-lucide="mail" class="w-5 h-5 text-[#A0785A] group-hover:text-white transition-colors duration-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-[#6F4E37]">Email</p>
+                                <a href="mailto:alex.morgan@example.com" class="text-[#3D2B1F] font-medium hover:text-[#A0785A] transition-colors">alex.morgan@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-[#A0785A]/10 rounded-full flex items-center justify-center group-hover:bg-[#A0785A] transition-colors duration-300">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-[#A0785A] group-hover:text-white transition-colors duration-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-[#6F4E37]">Location</p>
+                                <p class="text-[#3D2B1F] font-medium">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="dribbble" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl border border-[#C3B091]/20 shadow-lg fade-in-up delay-200">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-[#6F4E37] mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 bg-[#F5F5DC]/50 border border-[#C3B091]/30 rounded-xl text-[#3D2B1F] placeholder-[#6F4E37]/50 focus:outline-none focus:ring-2 focus:ring-[#A0785A] focus:border-transparent transition-all"
+                                placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-[#6F4E37] mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 bg-[#F5F5DC]/50 border border-[#C3B091]/30 rounded-xl text-[#3D2B1F] placeholder-[#6F4E37]/50 focus:outline-none focus:ring-2 focus:ring-[#A0785A] focus:border-transparent transition-all"
+                                placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-[#6F4E37] mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                class="w-full px-4 py-3 bg-[#F5F5DC]/50 border border-[#C3B091]/30 rounded-xl text-[#3D2B1F] placeholder-[#6F4E37]/50 focus:outline-none focus:ring-2 focus:ring-[#A0785A] focus:border-transparent transition-all resize-none"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full py-4 px-6 bg-[#A0785A] hover:bg-[#6F4E37] text-white font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-[#C3B091]/30 bg-[#F5F5DC]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-[#6F4E37] text-sm">
+                © 2024 Alex Morgan. All rights reserved.
+            </p>
+            <p class="text-[#6F4E37]/60 text-sm flex items-center gap-1">
+                Made with <i data-lucide="heart" class="w-4 h-4 text-[#A0785A] fill-current"></i> and coffee
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+<script src="https://deepsite.hf.co/deepsite-badge.js"></script>
+</body>
+</html>
