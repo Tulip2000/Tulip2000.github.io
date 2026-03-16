@@ -509,7 +509,6 @@
     </script>
 <div id="modal1" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal1')"></div>
-    
     <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
         <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-2xl">×</button>
         <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Integrated Branding Systems</h2>
@@ -525,6 +524,7 @@
         <p class="text-[#6F4E37]">Hier steht der Text für dein zweites Projekt...</p>
     </div>
 </div>
+
 <div id="modal3" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal3')"></div>
     <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
@@ -532,22 +532,21 @@
         <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Strategic Content Management</h2>
         <p class="text-[#6F4E37]">Hier steht der Text für dein dritter Projekt...</p>
     </div>
-<div id="modal4" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+</div> <div id="modal4" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal4')"></div>
     <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
         <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-2xl">×</button>
-        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Visual Storytelling & Photography
-</h2>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Visual Storytelling & Photography</h2>
         <p class="text-[#6F4E37]">Hier steht der Text für dein viertes Projekt...</p>
     </div>
-<div id="modal5" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+</div> <div id="modal5" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal5')"></div>
     <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
         <button onclick="closeModal('modal5')" class="absolute top-4 right-4 text-2xl">×</button>
         <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Dynamic Motion & Video Editing</h2>
         <p class="text-[#6F4E37]">Hier steht der Text für dein fünftes Projekt...</p>
     </div>
-<div id="modal6" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+</div> <div id="modal6" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal6')"></div>
     <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
         <button onclick="closeModal('modal6')" class="absolute top-4 right-4 text-2xl">×</button>
@@ -555,28 +554,17 @@
         <p class="text-[#6F4E37]">Hier steht der Text für dein sechste Projekt...</p>
     </div>
 </div>
-</div>
-</div>
-</div>
 
 <script>
-   function openModal(modal1) {
-       document.getElementById(modal1).classList.remove('hidden');
+   // Wir brauchen nur diese zwei kurzen Funktionen für ALLE Fenster
+   function openModal(modalId) {
+       document.getElementById(modalId).classList.remove('hidden');
+       document.body.style.overflow = 'hidden'; 
    }
-   function closeModal(modal2) {
-       document.getElementById(modal2).classList.add('hidden');
-   }
-   function closeModal(modal3) {
-       document.getElementById(modal3).classList.add('hidden');
-   }
-   function closeModal(modal4) {
-       document.getElementById(modal4).classList.add('hidden');
-   }
-   function closeModal(modal5) {
-       document.getElementById(modal5).classList.add('hidden');
-   }
-   function closeModal(modal6) {
-       document.getElementById(modal6).classList.add('hidden');
+
+   function closeModal(modalId) {
+       document.getElementById(modalId).classList.add('hidden');
+       document.body.style.overflow = 'auto';
    }
 </script>
 </body>
