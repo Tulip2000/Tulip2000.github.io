@@ -42,9 +42,7 @@
         <span class="lang" data-en="Projects" data-de="Projekte">Projects</span>
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
     </a>
-    <button id="lang-switch" class="ml-4 px-3 py-1 border border-[#A0785A] rounded-full text-xs font-bold text-[#A0785A] hover:bg-[#A0785A] hover:text-white transition-all">
-        DE / EN
-    </button>
+    <div id="google_translate_element" class="ml-4 translate-wrapper"></div>
 </div>
 
                 <!-- Mobile Menu Button -->
@@ -566,31 +564,16 @@
        document.body.style.overflow = 'auto';
    }
 </script>
-    <script>
-    const langBtn = document.getElementById('lang-switch');
-    const langElements = document.querySelectorAll('.lang');
-    let currentLang = localStorage.getItem('preferredLang') || 'en';
-
-    function updateLanguage() {
-        langElements.forEach(el => {
-            const translation = el.getAttribute(`data-${currentLang}`);
-            if (translation) {
-                el.textContent = translation;
-            }
-        });
-        // Button Text aktualisieren
-        langBtn.textContent = currentLang === 'en' ? 'Switch to DE' : 'Switch to EN';
-        // Wahl speichern
-        localStorage.setItem('preferredLang', currentLang);
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en', 
+            includedLanguages: 'de,en', // Nur Deutsch und Englisch erlauben
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
     }
-
-    langBtn.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'de' : 'en';
-        updateLanguage();
-    });
-
-    // Beim Laden der Seite Sprache setzen
-    updateLanguage();
 </script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
