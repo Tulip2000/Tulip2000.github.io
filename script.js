@@ -212,4 +212,3 @@ if (window.history.replaceState) {
 // Console Easter Egg
 console.log('%c👋 Thanks for checking out my portfolio!', 'color: #A0785A; font-size: 16px; font-weight: bold;');
 console.log('%cFeel free to connect with me!', 'color: #6F4E37; font-size: 12px;');
-
