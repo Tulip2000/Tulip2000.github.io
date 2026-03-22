@@ -227,3 +227,8 @@ img[loading="lazy"] {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+img[loading="lazy"].loaded {
+    background: none;
+    animation: none;
+}
