@@ -566,5 +566,31 @@
        document.body.style.overflow = 'auto';
    }
 </script>
+    <script>
+    const langBtn = document.getElementById('lang-switch');
+    const langElements = document.querySelectorAll('.lang');
+    let currentLang = localStorage.getItem('preferredLang') || 'en';
+
+    function updateLanguage() {
+        langElements.forEach(el => {
+            const translation = el.getAttribute(`data-${currentLang}`);
+            if (translation) {
+                el.textContent = translation;
+            }
+        });
+        // Button Text aktualisieren
+        langBtn.textContent = currentLang === 'en' ? 'Switch to DE' : 'Switch to EN';
+        // Wahl speichern
+        localStorage.setItem('preferredLang', currentLang);
+    }
+
+    langBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'de' : 'en';
+        updateLanguage();
+    });
+
+    // Beim Laden der Seite Sprache setzen
+    updateLanguage();
+</script>
 </body>
 </html>
