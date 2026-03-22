@@ -227,15 +227,3 @@ img[loading="lazy"] {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
-/* Versteckt den Google-Frame oben */
-.goog-te-banner-frame.skiptranslate {
-    display: none !important;
-}
-body {
-    top: 0px !important;
-}
-
-img[loading="lazy"].loaded {
-    background: none;
-    animation: none;
-}
