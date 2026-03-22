@@ -3,43 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tulip2000 | Designing Innovative Experiences</title>
+    <title>Tulip2000 | Designing Innovative </title>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans antialiased bg-[#F5F5DC] text-[#3D2B1F]">
 
+    <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F5F5DC]/90 backdrop-blur-md border-b border-[#C3B091]/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#home" class="font-serif text-2xl font-bold text-[#6F4E37] tracking-tight hover:text-[#A0785A] transition-colors">
                         Vivid Vision
                     </a>
                 </div>
 
-                <div class="hidden md:flex items-center space-x-8">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
                     <a href="#about" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
-                        <span data-key="nav-about">About</span>
+                        About
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#projects" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
-                        <span data-key="nav-projects">Projects</span>
+                        Projects
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <button id="lang-switch" class="px-4 py-2 border border-[#A0785A] rounded-full text-xs font-bold text-[#A0785A] hover:bg-[#A0785A] hover:text-white transition-all">
-                        DE / EN
-                    </button>
+                    <a href="#skills" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+                        Skills
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-[#6F4E37] hover:text-[#A0785A] focus:outline-none p-2">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -48,38 +61,42 @@
             </div>
         </div>
 
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-[#F5F5DC] border-t border-[#C3B091]/30 absolute w-full shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#about" data-key="nav-about" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">About</a>
-                <a href="#projects" data-key="nav-projects" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Projects</a>
-                <a href="#skills" data-key="nav-skills" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Skills</a>
-                <a href="#contact" data-key="nav-contact" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Contact</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">About</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Projects</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Skills</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-3 text-[#6F4E37] hover:text-[#A0785A] hover:bg-[#C3B091]/10 rounded-md font-medium transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero / About Section -->
     <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
                 <div class="order-2 md:order-1 fade-in-up">
-                    <p data-key="hero-welcome" class="text-[#A0785A] font-medium tracking-wide uppercase text-sm mb-4">Welcome to my portfolio</p>
-                    <h1 data-key="hero-title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#3D2B1F] leading-tight mb-6">
-                        Crafting Digital Experiences
+                    <p class="text-[#A0785A] font-medium tracking-wide uppercase text-sm mb-4">Welcome to my portfolio</p>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#3D2B1F] leading-tight mb-6">
+                        Crafting Digital <span class="text-[#A0785A] italic">Experiences</span>
                     </h1>
-                    <p data-key="hero-desc" class="text-lg text-[#6F4E37] leading-relaxed mb-8 max-w-lg">
+                    <p class="text-lg text-[#6F4E37] leading-relaxed mb-8 max-w-lg">
                         I’m Tulip2000, a Media & Integrated Designer with over 8 years of immersion in the design world. I specialize in building user-centric branding and innovative visual systems. By blending my background as a Design Assistant with strategic integrated thinking, I turn complex ideas into seamless, functional experiences.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#projects" data-key="btn-projects" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-[#A0785A] hover:bg-[#6F4E37] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <a href="#projects" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-[#A0785A] hover:bg-[#6F4E37] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                             View My Projects
                             <i data-lucide="arrow-down" class="ml-2 w-4 h-4"></i>
                         </a>
-                        <a href="#contact" data-key="btn-contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-[#A0785A] text-base font-medium rounded-full text-[#A0785A] hover:bg-[#A0785A] hover:text-white transition-all duration-300">
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-[#A0785A] text-base font-medium rounded-full text-[#A0785A] hover:bg-[#A0785A] hover:text-white transition-all duration-300">
                             Contact Me
                         </a>
                     </div>
                 </div>
 
+                <!-- Image -->
                 <div class="order-1 md:order-2 flex justify-center fade-in-up delay-200">
                     <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
                         <div class="absolute inset-0 bg-[#C3B091] rounded-full opacity-20 blur-3xl transform translate-x-4 translate-y-4"></div>
@@ -94,8 +111,8 @@
                                     <i data-lucide="code-2" class="w-6 h-6 text-[#A0785A]"></i>
                                 </div>
                                 <div>
-                                    <p data-key="badge-exp" class="text-sm text-[#6F4E37] font-medium">Experience</p>
-                                    <p class="text-[#3D2B1F] font-bold">8+ Years</p>
+                                    <p class="text-sm text-[#6F4E37] font-medium">Experience</p>
+                                    <p class="text-[#3D2B1F] font-bold">2+ Years</p>
                                 </div>
                             </div>
                         </div>
@@ -105,146 +122,450 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white/50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in-up">
-                <h2 data-key="section-projects-title" class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">My Projects</h2>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">My Projects</h2>
                 <div class="w-24 h-1 bg-[#A0785A] mx-auto rounded-full"></div>
-                <p data-key="section-projects-desc" class="mt-4 text-[#6F4E37] max-w-2xl mx-auto">A selection of my recent work, showcasing web applications, design systems, and creative solutions.</p>
+                <p class="mt-4 text-[#6F4E37] max-w-2xl mx-auto">A selection of my recent work, showcasing web applications, design systems, and creative solutions.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
                 <article onclick="openModal('modal1')" class="project-card cursor-pointer group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
                     <div class="relative overflow-hidden h-56">
                         <img src="http://static.photos/technology/640x360/101" alt="Integrated Branding Systems" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
                             <div class="flex gap-3">
-                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
                                     <i data-lucide="external-link" class="w-5 h-5"></i>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 data-key="p1-title" class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Integrated Branding Systems</h3>
-                        <p data-key="p1-desc" class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Developing holistic brand identities that tell a consistent story across all touchpoints.</p>
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Integrated Branding Systems</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Developing holistic brand identities that tell a consistent story across all touchpoints, from digital presence to physical media.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Brand Strategy</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Visual Identity</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Logo Design</span>
                         </div>
                     </div>
                 </article>
-                </div>
+
+                <!-- Project 2 -->
+                <article onclick="openModal('modal2')" class="project-card cursor-pointer group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/workspace/640x360/55" alt="Social Media & Visual Assets" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Social Media & Visual Assets</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Creating engaging visual content tailored for social platforms, ensuring brand consistency while maximizing audience interaction..</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Graphic Design</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Content Creation</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Instagram</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article onclick="openModal('modal3')" class="project-card cursor-pointer group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-200">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/abstract/640x360/88" alt="Strategic Content Management" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Strategic Content Management</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Planning and maintaining digital content across various CMS platforms to ensure a seamless and engaging user experience.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">CMS Strategy</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Media Assets</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Digital Operations</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article onclick="openModal('modal4')" class="project-card cursor-pointer group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/technology/640x360/202" alt="Visual Storytelling & Photography" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Visual Storytelling & Photography</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Professional art direction and post-production to amplify a brand’s message through authentic and high-impact visual content.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Art Direction</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Retouching</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Composition</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article onclick="openModal('modal5')" class="project-card cursor-pointer group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-100">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/nature/640x360/33" alt="Dynamic Motion & Video Editing" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Dynamic Motion & Video Editing</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Post-production and editing of audiovisual content for social media and web—managing the workflow from storyboard to final export.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Premiere Pro</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Capcut</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Aftereffect</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article onclick="openModal('modal6')" class="project-card cursor-pointer group bg-[#F5F5DC] rounded-2xl overflow-hidden border border-[#C3B091]/20 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up delay-200">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="http://static.photos/minimal/640x360/77" alt="Responsive Web Design" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#A0785A] hover:text-white transition-colors text-[#3D2B1F]">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-[#3D2B1F] mb-2 group-hover:text-[#A0785A] transition-colors">Responsive Web Design</h3>
+                        <p class="text-[#6F4E37] text-sm mb-4 line-clamp-2">Designing clean and functional layouts for websites. I focus on creating visual structures that look great and are easy for people to navigate.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Web Design</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Figma</span>
+                            <span class="px-3 py-1 bg-[#C3B091]/20 text-[#6F4E37] text-xs rounded-full font-medium">Wordpress</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in-up">
-                <h2 data-key="section-skills-title" class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">My Skills</h2>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">My Skills</h2>
                 <div class="w-24 h-1 bg-[#A0785A] mx-auto rounded-full"></div>
-                <p data-key="section-skills-desc" class="mt-4 text-[#6F4E37] max-w-2xl mx-auto">Technologies and tools I use to bring ideas to life.</p>
+                <p class="mt-4 text-[#6F4E37] max-w-2xl mx-auto">Technologies and tools I use to bring ideas to life.</p>
             </div>
-            </div>
-    </section>
 
-    <section id="contact" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white/50">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="fade-in-up">
-                    <h2 data-key="contact-title" class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-6">Let's get in touch</h2>
-                    <p data-key="contact-desc" class="text-[#6F4E37] text-lg mb-8 leading-relaxed">
-                        Have a project in mind? I'd love to hear from you.
-                    </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Visual Design -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="layout" class="w-7 h-7 text-[#A0785A]"></i>
                     </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Visual Design</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Branding & Identity</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Web & UI Design</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Social Media</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Layout Basics</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Production -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up delay-100">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="server" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Media Production</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Photography</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Video Editing</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Image Retouching</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#6F4E37] text-sm">Post-Production</span>
+                            <div class="w-24 h-2 bg-[#F5F5DC] rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-[#A0785A] rounded-full" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up delay-200">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="palette" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Software</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Premiere Pro</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Indesign</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Photoshop</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Illustrator</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Aftereffect</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Lightroom</span>
+                    </div>
+                </div>
+
+                <!-- Management & Tools -->
+                <div class="skill-category bg-white p-8 rounded-2xl border border-[#C3B091]/20 shadow-md hover:shadow-lg transition-all duration-300 fade-in-up delay-300">
+                    <div class="w-14 h-14 bg-[#A0785A]/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-7 h-7 text-[#A0785A]"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-[#3D2B1F] mb-4">Management & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">WordPress / CMS</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Project Planning</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Typeform</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Storerocket</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">Notion</span>
+                        <span class="px-3 py-2 bg-[#F5F5DC] text-[#6F4E37] text-sm rounded-lg font-medium border border-[#C3B091]/20">CI/CD</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Info -->
+                <div class="fade-in-up">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-6">Let's get in touch</h2>
+                    <p class="text-[#6F4E37] text-lg mb-8 leading-relaxed">
+                        Have a project in mind or want to collaborate? I'd love to hear from you. Fill out the form or reach out directly through any of the channels below.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-[#A0785A]/10 rounded-full flex items-center justify-center group-hover:bg-[#A0785A] transition-colors duration-300">
+                                <i data-lucide="mail" class="w-5 h-5 text-[#A0785A] group-hover:text-white transition-colors duration-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-[#6F4E37]">Email</p>
+                                <a href="mailto:laleart20@gmail.com" class="text-[#3D2B1F] font-medium hover:text-[#A0785A] transition-colors">lalearts20@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-[#A0785A]/10 rounded-full flex items-center justify-center group-hover:bg-[#A0785A] transition-colors duration-300">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-[#A0785A] group-hover:text-white transition-colors duration-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-[#6F4E37]">Location</p>
+                                <p class="text-[#3D2B1F] font-medium">Cologne/ Germay </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-[#F5F5DC] border border-[#C3B091]/30 rounded-full flex items-center justify-center text-[#6F4E37] hover:bg-[#A0785A] hover:text-white hover:border-[#A0785A] transition-all duration-300 shadow-sm hover:shadow-md">
+                            <i data-lucide="dribbble" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl border border-[#C3B091]/20 shadow-lg fade-in-up delay-200">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-[#6F4E37] mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 bg-[#F5F5DC]/50 border border-[#C3B091]/30 rounded-xl text-[#3D2B1F] placeholder-[#6F4E37]/50 focus:outline-none focus:ring-2 focus:ring-[#A0785A] focus:border-transparent transition-all"
+                                placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-[#6F4E37] mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 bg-[#F5F5DC]/50 border border-[#C3B091]/30 rounded-xl text-[#3D2B1F] placeholder-[#6F4E37]/50 focus:outline-none focus:ring-2 focus:ring-[#A0785A] focus:border-transparent transition-all"
+                                placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-[#6F4E37] mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                class="w-full px-4 py-3 bg-[#F5F5DC]/50 border border-[#C3B091]/30 rounded-xl text-[#3D2B1F] placeholder-[#6F4E37]/50 focus:outline-none focus:ring-2 focus:ring-[#A0785A] focus:border-transparent transition-all resize-none"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full py-4 px-6 bg-[#A0785A] hover:bg-[#6F4E37] text-white font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-[#C3B091]/30 bg-[#F5F5DC]">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-[#6F4E37] text-sm">
-                © 2026 Lale Hosseini. <span data-key="footer-rights">All rights reserved.</span>
+                © 2026 Lale Hosseini. All rights reserved.
+            </p>
+            <p class="text-[#6F4E37]/60 text-sm flex items-center gap-1">
+                Made with <i data-lucide="heart" class="w-4 h-4 text-[#A0785A] fill-current"></i> and coffee
             </p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
     <script>
+        // Initialize Lucide Icons
         lucide.createIcons();
-
-        // ÜBERSETZUNGSDATEN
-        const translations = {
-            'en': {
-                'nav-about': 'About',
-                'nav-projects': 'Projects',
-                'nav-skills': 'Skills',
-                'nav-contact': 'Contact',
-                'hero-welcome': 'Welcome to my portfolio',
-                'hero-title': 'Crafting Digital Experiences',
-                'hero-desc': 'I’m Tulip2000, a Media & Integrated Designer with over 8 years of immersion in the design world...',
-                'btn-projects': 'View My Projects',
-                'btn-contact': 'Contact Me',
-                'badge-exp': 'Experience',
-                'section-projects-title': 'My Projects',
-                'section-projects-desc': 'A selection of my recent work, showcasing web applications and creative solutions.',
-                'section-skills-title': 'My Skills',
-                'section-skills-desc': 'Technologies and tools I use to bring ideas to life.',
-                'contact-title': "Let's get in touch",
-                'contact-desc': 'Have a project in mind or want to collaborate? I\'d love to hear from you.',
-                'footer-rights': 'All rights reserved.'
-            },
-            'de': {
-                'nav-about': 'Über mich',
-                'nav-projects': 'Projekte',
-                'nav-skills': 'Skills',
-                'nav-contact': 'Kontakt',
-                'hero-welcome': 'Willkommen in meinem Portfolio',
-                'hero-title': 'Digitale Erlebnisse gestalten',
-                'hero-desc': 'Ich bin Tulip2000, eine Media & Integrated Designerin mit über 8 Jahren Erfahrung in der Designwelt. Ich spezialisiere mich auf nutzerzentriertes Branding und innovative visuelle Systeme.',
-                'btn-projects': 'Projekte ansehen',
-                'btn-contact': 'Kontaktieren Sie mich',
-                'badge-exp': 'Erfahrung',
-                'section-projects-title': 'Meine Projekte',
-                'section-projects-desc': 'Eine Auswahl meiner aktuellen Arbeiten, von Web-Applikationen bis zu kreativen Lösungen.',
-                'section-skills-title': 'Meine Fähigkeiten',
-                'section-skills-desc': 'Technologien und Tools, mit denen ich Ideen zum Leben erwecke.',
-                'contact-title': 'Lassen Sie uns vernetzen',
-                'contact-desc': 'Haben Sie ein Projekt im Kopf oder möchten Sie zusammenarbeiten? Ich freue mich auf Ihre Nachricht.',
-                'footer-rights': 'Alle Rechte vorbehalten.'
-            }
-        };
-
-        const langBtn = document.getElementById('lang-switch');
-        let currentLang = localStorage.getItem('lang') || 'en';
-
-        function updateTexts() {
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                if (translations[currentLang][key]) {
-                    el.innerHTML = translations[currentLang][key];
-                }
-            });
-            langBtn.textContent = currentLang === 'en' ? 'DE / EN' : 'EN / DE';
-        }
-
-        langBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'de' : 'en';
-            localStorage.setItem('lang', currentLang);
-            updateTexts();
-        });
-
-        // Initialer Aufruf
-        updateTexts();
-
-        // Modal Logic
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; 
-        }
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
     </script>
+<div id="modal1" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal1')"></div>
+    <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
+        <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-2xl">×</button>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Integrated Branding Systems</h2>
+        <p class="text-[#6F4E37]">Hier steht jetzt der ganze lange Artikel zu deinem ersten Projekt...</p>
+    </div>
+</div>
+
+<div id="modal2" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal2')"></div>
+    <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
+        <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-2xl">×</button>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Social Media & Visual Assets</h2>
+        <p class="text-[#6F4E37]">Hier steht der Text für dein zweites Projekt...</p>
+    </div>
+</div>
+
+<div id="modal3" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal3')"></div>
+    <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
+        <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-2xl">×</button>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Strategic Content Management</h2>
+        <p class="text-[#6F4E37]">Hier steht der Text für dein dritter Projekt...</p>
+    </div>
+</div> <div id="modal4" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal4')"></div>
+    <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
+        <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-2xl">×</button>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Visual Storytelling & Photography</h2>
+        <p class="text-[#6F4E37]">Hier steht der Text für dein viertes Projekt...</p>
+    </div>
+</div> <div id="modal5" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal5')"></div>
+    <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
+        <button onclick="closeModal('modal5')" class="absolute top-4 right-4 text-2xl">×</button>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Dynamic Motion & Video Editing</h2>
+        <p class="text-[#6F4E37]">Hier steht der Text für dein fünftes Projekt...</p>
+    </div>
+</div> <div id="modal6" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('modal6')"></div>
+    <div class="relative bg-[#F5F5DC] max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl shadow-2xl p-8">
+        <button onclick="closeModal('modal6')" class="absolute top-4 right-4 text-2xl">×</button>
+        <h2 class="font-serif text-3xl font-bold text-[#3D2B1F] mb-4">Responsive Web Design</h2>
+        <p class="text-[#6F4E37]">Hier steht der Text für dein sechste Projekt...</p>
+    </div>
+</div>
+
+<script>
+   // Wir brauchen nur diese zwei kurzen Funktionen für ALLE Fenster
+   function openModal(modalId) {
+       document.getElementById(modalId).classList.remove('hidden');
+       document.body.style.overflow = 'hidden'; 
+   }
+
+   function closeModal(modalId) {
+       document.getElementById(modalId).classList.add('hidden');
+       document.body.style.overflow = 'auto';
+   }
+</script>
 </body>
 </html>
