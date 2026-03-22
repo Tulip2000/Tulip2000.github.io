@@ -234,16 +234,6 @@ img[loading="lazy"] {
 body {
     top: 0px !important;
 }
-/* Passt das Widget dezent an */
-#google_translate_element select {
-    background-color: #F5F5DC;
-    border: 1px solid #C3B091;
-    border-radius: 20px;
-    padding: 4px 8px;
-    color: #3D2B1F;
-    font-size: 12px;
-    outline: none;
-}
 
 img[loading="lazy"].loaded {
     background: none;
