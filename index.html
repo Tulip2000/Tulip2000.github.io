@@ -33,24 +33,19 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
-                        About
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#projects" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
-                        Projects
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#skills" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
-                        Skills
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#contact" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
-                        Contact
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                </div>
+                <div class="hidden md:flex items-center space-x-8">
+    <a href="#about" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+        <span class="lang" data-en="About" data-de="Über mich">About</span>
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <a href="#projects" class="nav-link text-[#6F4E37] hover:text-[#A0785A] font-medium transition-colors relative group">
+        <span class="lang" data-en="Projects" data-de="Projekte">Projects</span>
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#A0785A] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <button id="lang-switch" class="ml-4 px-3 py-1 border border-[#A0785A] rounded-full text-xs font-bold text-[#A0785A] hover:bg-[#A0785A] hover:text-white transition-all">
+        DE / EN
+    </button>
+</div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
@@ -80,7 +75,11 @@
                 <div class="order-2 md:order-1 fade-in-up">
                     <p class="text-[#A0785A] font-medium tracking-wide uppercase text-sm mb-4">Welcome to my portfolio</p>
                     <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#3D2B1F] leading-tight mb-6">
-                        Crafting Digital <span class="text-[#A0785A] italic">Experiences</span>
+                       <span class="lang" 
+          data-en="Crafting Digital Experiences" 
+          data-de="Digitale Erlebnisse erschaffen">
+          Crafting Digital Experiences
+    </span>
                     </h1>
                     <p class="text-lg text-[#6F4E37] leading-relaxed mb-8 max-w-lg">
                         I’m Tulip2000, a Media & Integrated Designer with over 8 years of immersion in the design world. I specialize in building user-centric branding and innovative visual systems. By blending my background as a Design Assistant with strategic integrated thinking, I turn complex ideas into seamless, functional experiences.
